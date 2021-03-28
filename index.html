@@ -86,7 +86,7 @@ blah, blah, blah, blah
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you you wondering if your personality type is more like an introvert or an extrovert?. Answer a few short questions to find out!</p>
+	<p>Are you you wondering if your personality type is more like an introvert or an extrovert? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Start here! </a> <!-- button on first page that leads to questions -->
 	</div>
@@ -111,8 +111,8 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p>In school would you rather...?</p> <!-- question 2 header --> 
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Attend an interesting discussion.</a> <!-- discussion button count for cold --> 
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">Listen to a compelling lecture.</a> <!-- lecture button count for allergy --> 
+	<a href="#three"  onclick="extrovertAdd();" class="w3-btn w3-black">Attend an interesting discussion.</a> <!-- discussion button count for extrovert --> 
+	<a href="#three"  onclick="introvertAdd();" class="w3-btn w3-black">Listen to a compelling lecture.</a> <!-- lecture button count for introvert --> 
 	
 </div><!-- end of question 2 -->
 	
@@ -122,9 +122,9 @@ blah, blah, blah, blah
 	</div> <!-- start of question 3 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p> <!-- question 3 header --> 
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for cold --> 
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for allergy --> 
+		<p> After a large event, how do you normally feel?</p> <!-- question 3 header --> 
+	<a href="#four"  onclick="extrovertAdd();" class="w3-btn w3-black"> Revived and refreshed. Possibly even ready for even more fun! </a> <!-- revived button counts for extrovert --> 
+	<a href="#four"  onclick="introvertAdd();" class="w3-btn w3-black"> I feel tired or drained. </a> <!-- tired button counts for introvert --> 
 	
 </div><!-- end of question 3 -->
 
@@ -134,11 +134,35 @@ blah, blah, blah, blah
 	</div><!-- start of question 4 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p> <!-- question 4 header --> 
+		<p> If you are home alone for a long period of time, how are you feeling? </p> <!-- question 4 header --> 
+	<a href="#resultspage"  onclick="extrovertAdd();" class="w3-btn w3-black"> Restless. I figure out something to do.</a> <!-- Restless button counts for extrovert --> 
+	<a href="#resultspage"  onclick="introvertAdd();" class="w3-btn w3-black">Excited. I finally have alone time or time to relax.</a> <!-- Excited button counts for introvert--> 
+	
+</div><!-- end of question 4 -->
+
+<div class="page" id="four"> <!-- start of question 5 -->
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 5 </h1> <!--question 5 title -->
+	</div><!-- start of question 5 content -->
+	
+	<div id="content" class="w3-container">
+		<p>How do you react to a disagreement?</p> <!-- question 5 header --> 
+	<a href="#resultspage"  onclick="extrovertAdd();" class="w3-btn w3-black"> I let out my thoughts right away. I also want to resolve the issue immediately. </a> <!-- yes button counts for allergy --> 
+	<a href="#resultspage"  onclick="introvertAdd();" class="w3-btn w3-black">I need time to think and process before I can speak up. </a> <!-- no button counts for cold--> 
+	
+</div><!-- end of question 5 -->
+
+<div class="page" id="four"> <!-- start of question 6 -->
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 4 </h1> <!--question 6 title -->
+	</div><!-- start of question 6 content -->
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p> <!-- question 6 header --> 
 	<a href="#resultspage"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for allergy and goes to results page --> 
 	<a href="#resultspage"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for cold and goes to results page--> 
 	
-</div><!-- end of question 4 -->
+</div><!-- end of question 6 -->
 
 
 <div class="page" id="resultspage"> <!-- results page -->
@@ -148,7 +172,7 @@ blah, blah, blah, blah
 	
 	<div id="content" class="w3-container">
 		<p id="results"></p>
-		<a onclick="resultscalculator();" class="w3-btn w3-grey w3-round"> Results </a> <!-- results button -->
+		<a onclick="resultscalculator();" class="w3-btn w3-grey w3-round"> Let's find out what you are! </a> <!-- results button -->
 
 	</div> <!-- end of results page -->
 </div>
