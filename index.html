@@ -23,9 +23,135 @@ Known Issues:
 blah, blah, blah, blah
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
+     <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+
+        function allergyAdd(){ //fucntion to count allergy//
+            allergy_count = allergy_count + 1;
+
+        }
+
+        function coldAdd(){ //function to count cold//
+            cold_count = cold_count + 1;
+	
+        }
+	
+	function resultscalculator(){ //function for the results page
+	var resultText = document.getElementById("resultspage"); //variable for the results
+	var allergyPercent = (allergy_count / (allergy_count + cold_count)) * 100; //equation for allergy probability
+	var coldPercent = (cold_count / (cold_count + allergy_count)) * 100; //equation for cold probability 
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //results output as percentages
+	}
+
+  </script>
+
+
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Introvert or Extrovert?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you you wondering if your personality type is more like an introvert or an extrovert?. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Start here! </a> <!-- button on first page that leads to questions -->
+	</div>
+
+<div class="page" id="one">  <!-- start of question 1 -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1> Question 1</h1> <!--question 1 title -->
+		
+	</div> <!-- start of question 1 content -->
+	
+    	<div id="content" class="w3-container">
+        <p> If you are going out for the night, which activity sounds more fun? </p> <!-- header for question 1 -->  
+	<a href="#two"  onclick="extrovertAdd();" class="w3-btn w3-black">Going out with friends. Having a lot of people around me makes me feel energized!</a>  <!-- Going out with friends button counts for extrovert --> 
+	<a href="#two"  onclick="introvertAdd();" class="w3-btn w3-black">Going to a one-on-one dinner with your best friend.</a>  <!-- dinner button counts for introvert --> 
+	
+</div><!-- end of question 1 -->
+	
+<div class="page" id="two"> <!-- question 2 title --> 
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1> <!--question 2 title -->
+	</div> <!-- start of question 2 content --> 
+	
+	<div id="content" class="w3-container">
+		<p>In school would you rather...?</p> <!-- question 2 header --> 
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Attend an interesting discussion.</a> <!-- discussion button count for cold --> 
+	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">Listen to a compelling lecture.</a> <!-- lecture button count for allergy --> 
+	
+</div><!-- end of question 2 -->
+	
+<div class="page" id="three"> <!-- start of question 3 -->
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 3 </h1> <!--question 3 title -->
+	</div> <!-- start of question 3 content -->
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p> <!-- question 3 header --> 
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for cold --> 
+	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for allergy --> 
+	
+</div><!-- end of question 3 -->
+
+<div class="page" id="four"> <!-- start of question 4 -->
+	<div class="w3-container w3-flat-carrot">
+		<h1> Question 4 </h1> <!--question 4 title -->
+	</div><!-- start of question 4 content -->
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p> <!-- question 4 header --> 
+	<a href="#resultspage"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for allergy and goes to results page --> 
+	<a href="#resultspage"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for cold and goes to results page--> 
+	
+</div><!-- end of question 4 -->
+
+
+<div class="page" id="resultspage"> <!-- results page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1> <!-- header for results -->
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results"></p>
+		<a onclick="resultscalculator();" class="w3-btn w3-grey w3-round"> Results </a> <!-- results button -->
+
+	</div> <!-- end of results page -->
+</div>
+
    </body>
 </html>
