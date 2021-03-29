@@ -33,25 +33,25 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var extrovert_count = 0;
+        var introvert_count = 0;
 
 
-        function allergyAdd(){ //fucntion to count allergy//
-            allergy_count = allergy_count + 1;
+        function extrovertAdd(){ //fucntion to count extrovert//
+            extrovert_count = extrovert_count + 1;
 
         }
 
-        function coldAdd(){ //function to count cold//
-            cold_count = cold_count + 1;
+        function introvertAdd(){ //function to count introvert//
+            introvert_count = introvert_count + 1;
 	
         }
 	
 	function resultscalculator(){ //function for the results page
 	var resultText = document.getElementById("resultspage"); //variable for the results
-	var allergyPercent = (allergy_count / (allergy_count + cold_count)) * 100; //equation for allergy probability
-	var coldPercent = (cold_count / (cold_count + allergy_count)) * 100; //equation for cold probability 
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //results output as percentages
+	var extrovertPercent = (extrovert_count / (extrovert_count + introvert_count)) * 100; //equation for extrovert probability
+	var introvertPercent = (introvert_count / (introvert_count + extrovert_count)) * 100; //equation for introvert probability 
+	resultText.innerHTML = "Probability it is extrovert =" + extrovertPercent + "%" + "<br> Probability it is a introvert =" + introvertPercent + "%"; //results output as percentages
 	}
 
   </script>
@@ -154,13 +154,13 @@ blah, blah, blah, blah
 
 <div class="page" id="four"> <!-- start of question 6 -->
 	<div class="w3-container w3-flat-carrot">
-		<h1> Question 4 </h1> <!--question 6 title -->
+		<h1> Question 6 </h1> <!--question 6 title -->
 	</div><!-- start of question 6 content -->
 	
 	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p> <!-- question 6 header --> 
-	<a href="#resultspage"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button counts for allergy and goes to results page --> 
-	<a href="#resultspage"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!-- no button counts for cold and goes to results page--> 
+		<p>When it comes to comes to small talk, which do you normally feel?</p> <!-- question 6 header --> 
+	<a href="#resultspage"  onclick="introvertAdd();" class="w3-btn w3-black">Hesitant. I have to plan my conversations ahead of time. </a> <!-- hesitant button counts for introvert and goes to results page --> 
+	<a href="#resultspage"  onclick="extrovertAdd();" class="w3-btn w3-black">Ready to talk to anyone! Thinking of new topics to talk about comes naturally. </a> <!-- ready button counts for extrovert and goes to results page--> 
 	
 </div><!-- end of question 6 -->
 
